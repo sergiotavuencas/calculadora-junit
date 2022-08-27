@@ -7,7 +7,7 @@ public class TesteDivisao {
 		 Divisao divisao = new Divisao();
 		
 		 /* Caso de teste 1: o resultado da divisão
-		  * não está sendo exibido por inteiro.
+		  * não está completo.
 		  * */
 		int resultado = divisao.calcular(10, 3);
 		System.out.println(resultado);
@@ -18,23 +18,31 @@ public class TesteDivisao {
 		resultado = divisao.calcular(0, 10);
 		System.out.println(resultado);
 		
-		/* Caso de teste 3: o resultado da divisão
-		 * está aprensentando um erro, pois não há
-		 * tratamento para quando ambos os valores
-		 * são iguais a zero.
+		/* Caso de teste 3: é apresentado um erro
+		 * pois o divisor precisa ser diferente de zero.
 		 * */
-		resultado = divisao.calcular(0, 0);
+		resultado = divisao.calcular(10, 0);
 		System.out.println(resultado);
 		
-		/* Caso de teste 2: o resultado da divisão
-		 * está correto.
+		/* Caso de teste 4: o resultado da divisão
+		 * está incompleto.
 		 * */
 		resultado = divisao.calcular(10, -3);
 		System.out.println(resultado);
 		
-		/* É necessário mudar o tipo de retorno para ponto flutuante, especificar 
-		 * qual valor é o dividendo e qual é o divisor, e tratar com um if para 
-		 * não aceitar ambos os valores iguais a zero.
+		/* Caso de teste 5: é apresentado um erro
+		 * pois não são aceitos valores com ponto
+		 * flutuante.
+		 * */
+		resultado = divisao.calcular(10, -3.5);
+		System.out.println(resultado);
+		
+		
+		/* É necessário mudar o tipo de retorno e os 
+		 * parâmetros para aceitar ponto flutuante, 
+		 * especificar qual valor é o dividendo e 
+		 * qual é o divisor, e aplicar uma condição 
+		 * para não aceitar zero como divisor.
 		 * */
 	}
 }

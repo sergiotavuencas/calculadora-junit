@@ -53,5 +53,15 @@ public class TesteSubtracao {
 		 * */
 		resultado = subtracao.calcular(0, 0);
 		System.out.println(resultado);
+		
+		/*	Caso de teste 9: o resultado da subtração
+		 * 	está correto.
+		 * */
+		resultado = subtracao.calcular(0.2, 0);
+		System.out.println(resultado);
+		
+		/* É necessário mudar o tipo de retorno e os 
+		 * parâmetros para aceitar ponto flutuante.
+		 * */
 	}
 }
