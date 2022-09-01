@@ -22,7 +22,7 @@ Antes de começar, é ideal ter o [Git](https://git-scm.com) instalado, e as seg
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "PATH", "Machine")
 ```
 4. Copie a seguinte linha de código e substitua **PATH** pelo caminho copiado só que dessa vez incluindo a pasta **bin**, deve ser parecido com o seguinte caminho;<br>
-`C:\Program Files\Java\jdk-11.0.16\bin`;
+`C:\Program Files\Java\jdk-11.0.16\bin`
 ```
 $OLDPATH = [System.Environment]::GetEnvironmentVariable('PATH','machine')
 $JAVAPATH = [System.Environment]::GetEnvironmentVariable('JAVA_HOME','machine')
@@ -35,7 +35,7 @@ $NEWPATH = "$OLDPATH;$JAVAPATH\bin"
 ```
 echo %JAVA_HOME%
 ```
-7. Para verificar a aplicação Java, a saída deve ser parecida com a seguinte, após a execução do comando abaixo;<br>
+7. Para verificar a aplicação Java, a saída deve ser parecida com a seguinte, após a execução do comando abaixo.<br>
 `java version "11.0.16" 2022-07-19 LTS`<br>
 `Java(TM) SE Runtime Environment 18.9 (build 11.0.16+11-LTS-199)`<br>
 `Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.16+11-LTS-199, mixed mode)`
