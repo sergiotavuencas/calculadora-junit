@@ -3,8 +3,9 @@ package junit.test;
 import org.junit.Test;
 
 import calculadora.Soma;
+import junit.framework.Assert;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({ "unused", "deprecation" })
 public class SomaJunitTest {
 	/* Teste da soma de dois valores inteiros,
 	 * e positivos.
@@ -13,6 +14,8 @@ public class SomaJunitTest {
 	public void PrimeiroCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(7, 5);
+		
+		Assert.assertEquals(12, teste);
 	}
 	
 	/* Teste da soma de dois valores inteiros,
@@ -22,6 +25,8 @@ public class SomaJunitTest {
 	public void SegundoCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(0, 5);
+		
+		Assert.assertEquals(5, teste);
 	}
 	
 	/* Teste da soma de dois valores inteiros,
@@ -31,6 +36,8 @@ public class SomaJunitTest {
 	public void TerceiroCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(0, 0);
+		
+		Assert.assertEquals(0, teste);
 	}
 
 	/* Teste da soma de dois valores inteiros,
@@ -40,6 +47,8 @@ public class SomaJunitTest {
 	public void QuartoCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(7, -5);
+		
+		Assert.assertEquals(2, teste);
 	}
 	
 	/* Teste da soma de dois valores inteiros,
@@ -49,6 +58,8 @@ public class SomaJunitTest {
 	public void QuintoCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(-7, 5);
+		
+		Assert.assertEquals(-2, teste);
 	}
 
 	/* Teste da soma de dois valores inteiros,
@@ -58,6 +69,8 @@ public class SomaJunitTest {
 	public void SextoCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(-7, -5);
+		
+		Assert.assertEquals(-12, teste);
 	}
 	
 	/* Teste da soma de dois valores, um inteiro,
@@ -67,5 +80,7 @@ public class SomaJunitTest {
 	public void SetimoCasoDeTeste() {
 		Soma soma = new Soma();
 		int teste = soma.calcular(7, .5);
+		
+		Assert.assertEquals(7.5, teste);
 	}
 }

@@ -3,8 +3,9 @@ package junit.test;
 import org.junit.Test;
 
 import calculadora.Multiplicacao;
+import junit.framework.Assert;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({ "unused", "deprecation" })
 public class MultiplicacaoJunitTest {
 	/* Teste da multiplicacao de dois valores inteiros,
 	 * e positivos.
@@ -13,6 +14,8 @@ public class MultiplicacaoJunitTest {
 	public void PrimeiroCasoDeTeste() {
 		Multiplicacao multiplicacao = new Multiplicacao();
 		int teste = multiplicacao.calcular(7, 5);
+		
+		Assert.assertEquals(35, teste);
 	}
 	
 	/* Teste da multiplicacao de dois valores inteiros,
@@ -22,6 +25,8 @@ public class MultiplicacaoJunitTest {
 	public void SegundoCasoDeTeste() {
 		Multiplicacao multiplicacao = new Multiplicacao();
 		int teste = multiplicacao.calcular(7, 0);
+		
+		Assert.assertEquals(0, teste);
 	}
 	
 	/* Teste da multiplicacao de dois valores inteiros,
@@ -31,6 +36,8 @@ public class MultiplicacaoJunitTest {
 	public void TerceiroCasoDeTeste() {
 		Multiplicacao multiplicacao = new Multiplicacao();
 		int teste = multiplicacao.calcular(-7, 5);
+		
+		Assert.assertEquals(-35, teste);
 	}
 
 	/* Teste da multiplicacao de dois valores inteiros,
@@ -40,6 +47,8 @@ public class MultiplicacaoJunitTest {
 	public void QuartoCasoDeTeste() {
 		Multiplicacao multiplicacao = new Multiplicacao();
 		int teste = multiplicacao.calcular(-7, -5);
+		
+		Assert.assertEquals(35, teste);
 	}
 	
 	/* Teste da multiplicacao de dois valores, um inteiro,
@@ -49,5 +58,7 @@ public class MultiplicacaoJunitTest {
 	public void QuintoCasoDeTeste() {
 		Multiplicacao multiplicacao = new Multiplicacao();
 		int teste = multiplicacao.calcular(-7, .5);
+		
+		Assert.assertEquals(-3.5, teste);
 	}
 }
