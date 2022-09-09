@@ -46,7 +46,7 @@ java -version
 
 ## Clone este repositório
 ```
-$ git clone https://github.com/sergiotavuencas/calculadora-junit
+git clone https://github.com/sergiotavuencas/calculadora-junit
 ```
 
 
